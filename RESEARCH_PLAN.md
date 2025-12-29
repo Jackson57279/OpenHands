@@ -819,6 +819,44 @@ This comprehensive plan provides a roadmap to match and potentially exceed Manus
 The architecture addresses all critical gaps identified while building on OpenHands' existing strengths: browser integration, event-driven architecture, memory management, and multi-agent delegation.
 Estimated Implementation Effort: 2-3 weeks for core parallelism + wide research, 1 week for browser scaling, 1 week for memory optimization, 1 week for testing and integration.
 ---
+Phase 7: GUI FOR WIDE RESEARCH
+7.1 Dashboard Design
+NEW DIRECTORY: frontend/src/components/wide-research/
+Create a modern, clean dashboard for managing wide research tasks using Tailwind CSS for styling. Focus on typography and layout for visual hierarchy without icons.
+
+Key Components:
+- Task Input Form: Clean form at the top for entering research queries with validation
+- Progress Section: Animated progress bars showing overall completion and batch progress
+- Agent Status Grid: Color-coded grid showing status of each parallel agent (pending, running, completed, failed)
+- Results Visualization: Interactive charts using Recharts showing key findings, sources, and confidence levels
+- Real-time Updates: WebSocket or polling for live progress updates
+- Responsive Design: Works seamlessly across desktop, tablet, and mobile devices
+- Accessibility: Proper contrast ratios, keyboard navigation, and screen reader support
+- Subtle Animations: Loading states, transitions, and progress animations for enhanced UX
+
+Design Principles:
+- Clean, modern aesthetics with appropriate whitespace
+- Responsive layouts that work across all device sizes
+- Subtle animations and transitions for enhanced user experience
+- Accessible design patterns with proper contrast and navigation
+- Follow current web design trends while maintaining usability
+- Typography-driven interface without icon dependencies
+
+7.2 Implementation Details
+- Use React hooks (useState, useEffect) for state management
+- Implement WebSocket connection for real-time agent status updates
+- Create reusable components for progress bars, status indicators, and charts
+- Ensure proper error handling and loading states
+- Integrate with backend API endpoints for task management
+- Add dark mode support using Tailwind's class-based approach
+
+7.3 Testing
+- Component rendering tests with React Testing Library
+- Responsive design tests across different screen sizes
+- Real-time update functionality tests
+- Accessibility audits using axe-core or similar tools
+- End-to-end tests for complete research workflow
+
 This plan is ready for implementation. Would you like me to:
 1. Start with Phase 0 (Critical Foundation)?
 2. Focus on specific phases?
